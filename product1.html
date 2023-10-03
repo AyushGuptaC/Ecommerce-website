@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!
+    </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utils.css">
+    <link rel="stylesheet" href="css/responsive.css">
+<style>
+    body{
+        background-image: url('logo.png');
+        background-size: cover;
+        height:100vh;
+       
+    }
+    
+</style>
+</head>
+
+<body>
+    <div class="progress"></div>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="">
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="allproducts.html"><img src="img/cart.png" alt="" width="20px"></a></li>
+            </ul>
+            
+        </nav>
+    </header>
+    <div class="row">
+        <div class="col-2">
+            <img src="Screenshot_2023-08-19-09-56-22-28.jpg" width="40%">
+        </div>
+
+        <div class="col-2">
+            <br>
+          
+
+            <br><br>
+            <p>Home / Products</p>
+            <br>
+            <h1>Redmi 12</h1>
+            <h3>Pacific blue,128GB</h3>
+            <br>
+            <p>Rs.<s><span>9,999</span></s> Rs.5,999</p>
+            <br>
+            <h4>Min 40% off</h4>
+            <br>
+            <h4>GRAB NOW !!!</h4>
+            <br><br>
+            <div class="design">
+
+                <form method="post" id="frmsubmit"
+                    action="https://script.google.com/macros/s/AKfycby8__qzfXsGmhl8KceJSk081ayPs70UYqI2z8NnjuMyY3s_41lx84pcDsb_WMzshgxH8w/exec">
+                    <br>
+                    <input type="hidden" class="input" value="redmi12,pacificblue,128GGB" name="mobilename" required>
+                    <input type="hidden" class="input" value="5,999" name="rate" required>
+                    <div class="inputs"> COSTOMER NAME:</div> <input type="text" class="input" name="name" required>
+                    <br> <br>
+                    <div class="inputs"> Address: </div> <input type="text" class="input" name="address" required>
+                    <br> <br>
+                    <div class="inputs"> E-mail:</div> <input type="text" class="input" name="email" required>
+                    <br> <br> No.of items: <br> <input type="number" class="input" value="1" name="quantity" required>
+
+                    <br> <br> <button type="submit" id="btnsubmit">
+                        <div class="inputs">BUY NOW! </div>
+                    </button>
+                    <div id="msg"></div>
+                </form>
+            </div>
+            <script>
+                jQuery('#frmSubmit').on('submit', function (e) {
+                    e.preventDefault();
+                    jQuery('#msg').html('Please wait...');
+                    jQuery('#btnSubmit').attr('disabled', true);
+                    jQuery.ajax({
+                        url: 'https://script.google.com/macros/s/AKfycby8__qzfXsGmhl8KceJSk081ayPs70UYqI2z8NnjuMyY3s_41lx84pcDsb_WMzshgxH8w/exec',
+                        type: 'post',
+                        data: jQuery('#frmSubmit').serialize(),
+                        success: function (result) {
+                            jQuery('#frmSubmit')[0].reset();
+                            jQuery('#msg').html('Thank You for buying a products');
+                            jQuery('#btnSubmit').attr('disabled', false);
+
+                        }
+                    });
+                });
+            </script>
+            <br> <br><br>
+            <div class="inform">
+                <h3>Product Details</h3>
+                <br>
+                <br>
+
+                <p>RAM : 12GB RAM <br> Processor : Dimensity 7050 |octa core|2.6 Hz <br>Rear Camera : 200MP(OIS) + 8MP +
+                    2MP
+                    <br>
+                    Font Camera : 32MP <br> Display : 6.7 Inch Full HD + OLED Display <br>
+                    Battery : 5000 mAh </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <br><br><br><br>
+
+    <br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br>
+
+    <footer class="flex-all-center">
+        <p>Copyright &copy; KING's LUXURY STORE.com </p>
+    </footer>
+</body>
+
+</html>

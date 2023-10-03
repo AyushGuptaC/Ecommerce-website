@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!
+    </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utils.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        body{
+            background-image: url('logo.png');
+            background-size: cover;
+            height:100vh;
+           
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="progress"></div>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="">
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="allproducts.html"><img src="img/cart.png" alt="" width="20px"></a></li>
+            </ul>
+         
+        </nav>
+    </header>
+    <div class="row">
+    <div class="col-2">
+        <img src="IMG_20230815_202541.jpg" width="40%">
+    </div>
+
+    <div class="col-2">
+    </br>
+</br></br>
+        <p>Home / Products</p>
+        <br>
+        <h1>TRIPR</h1>
+        <h3>Man Solid Quilted Jacket</h3>
+        <br>
+        <p>Rs.<s><span>4,999</span></s>  Rs.1,999</p>
+<br>
+       <h4>Min 77% off</h4>
+       <br>
+        <h4>GRAB NOW !!!</h4>
+    <br>
+    <div class="design">
+            
+        <form method="post" id="frmsubmit" action="https://script.google.com/macros/s/AKfycbyncsckTIZS-_HNdG5lwWR8aB2LWNIiQ-TRuh1X78J8eezpGbpmk2PxqmhbBJLDoHn-yA/exec">
+            <br>
+            <input type="hidden" class="input" value="tripr,black" name="productname" required>
+            <input type="hidden" class="input" value="1,999" name="rate" required>
+            <div class="inputs"> COSTOMER NAME:</div> <input type="text" class="input" name="name" required>
+            <br> <br>
+            <div class="inputs"> Address: </div> <input type="text" class="input" name="address" required>
+            <br> <br>
+            <div class="inputs"> E-mail:</div> <input type="text" class="input" name="email" required>
+          <br>   <br><select name="size" required>
+                <option>Select Size</option>
+                <option value="s">36(S)</option>
+                <option value="M">38(M)</option>
+                <option value="L">40(L)</option>
+                <option value="XL">42(XL)</option>
+                <option value="XXL">44(XXL)</option> 
+            </select>
+            <br> No.of items: <br> <input type="number" class="input" value="1" name="quantity" required>
+
+            <br> <button type="submit" id="btnsubmit">
+                <div class="inputs">BUY NOW! </div>
+            </button>
+            <div id="msg"></div>
+        </form>
+    </div>
+    <script>
+        jQuery('#frmSubmit').on('submit', function (e) {
+            e.preventDefault();
+            jQuery('#msg').html('Please wait...');
+            jQuery('#btnSubmit').attr('disabled', true);
+            jQuery.ajax({
+                url: 'https://script.google.com/macros/s/AKfycbyncsckTIZS-_HNdG5lwWR8aB2LWNIiQ-TRuh1X78J8eezpGbpmk2PxqmhbBJLDoHn-yA/exec',
+                type: 'post',
+                data: jQuery('#frmSubmit').serialize(),
+                success: function (result) {
+                    jQuery('#frmSubmit')[0].reset();
+                    jQuery('#msg').html('Thank You for buying a products');
+                    jQuery('#btnSubmit').attr('disabled', false);
+                    
+                }
+            });
+        });
+    </script>
+</br> </br></br>
+       
+        <div class="inform">
+            <h3>Product Details</h3>
+            <br>
+            <br>
+
+            <p>Ideal for : Men <br> Sleeve : full sleeve <br>Closure : Zipper
+                <br>
+                Pack of : one <br>Suitable for : Western Wear <br>
+                Type : Jacket
+            </p>
+        </div>
+    </div>
+    </div>
+    </br>
+    </br>
+
+    </br></br></br></br>
+
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+
+    <footer class="flex-all-center">
+        <p>Copyright &copy; KING's LUXURY STORE.com </p>
+    </footer>
+</body>
+
+</html>
